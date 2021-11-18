@@ -6,6 +6,7 @@ Usage:
     $ python path/to/train.py --data coco128.yaml --weights yolov5s.pt --img 640
 """
 
+
 import argparse
 import logging
 import math
