@@ -132,8 +132,9 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
     if pt and device.type != 'cpu':
         model(torch.zeros(1, 3, *imgsz).to(device).type_as(next(model.parameters())))  # run once
     dt, seen = [0.0, 0.0, 0.0], 0
-    print("OOOOOOOOOOOOO", dataset)
+    # print("OOOOOOOOOOOOO", dataset)
     for path, img, im0s, vid_cap in dataset:
+        # print("11111111111", im0s)
         t1 = time_sync()
         if onnx:
             img = img.astype('float32')
